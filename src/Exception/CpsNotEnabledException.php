@@ -18,6 +18,7 @@
 
 namespace Apigee\Edge\Exception;
 
+use ReturnTypeWillChange;
 use Throwable;
 
 /**
@@ -48,7 +49,7 @@ class CpsNotEnabledException extends \RuntimeException
         $this->organization = $organization;
     }
 
-    public function __toString()
+    #[ReturnTypeWillChange] public function __toString()
     {
         return "Core Persistence Services is not enabled on {$this->organization} organization.";
     }

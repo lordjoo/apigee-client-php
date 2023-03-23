@@ -91,7 +91,7 @@ final class PropertyAccessorDecorator implements PropertyAccessorInterface
     /**
      * {@inheritdoc}
      */
-    public function getValue($objectOrArray, $propertyPath)
+    public function getValue($objectOrArray, $propertyPath) : mixed
     {
         try {
             $value = $this->propertyAccessor->getValue($objectOrArray, $propertyPath);
@@ -112,7 +112,7 @@ final class PropertyAccessorDecorator implements PropertyAccessorInterface
     /**
      * {@inheritdoc}
      */
-    public function isWritable($objectOrArray, $propertyPath)
+    public function isWritable($objectOrArray, $propertyPath): bool
     {
         return $this->propertyAccessor->isWritable($objectOrArray, $propertyPath);
     }
@@ -120,7 +120,7 @@ final class PropertyAccessorDecorator implements PropertyAccessorInterface
     /**
      * {@inheritdoc}
      */
-    public function isReadable($objectOrArray, $propertyPath)
+    public function isReadable($objectOrArray, $propertyPath): bool
     {
         return $this->propertyAccessor->isReadable($objectOrArray, $propertyPath);
     }

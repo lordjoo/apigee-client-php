@@ -19,6 +19,7 @@
 namespace Apigee\Edge\Exception;
 
 use Http\Client\Exception;
+use ReturnTypeWillChange;
 
 /**
  * General exception class for API communication errors.
@@ -28,7 +29,7 @@ class ApiException extends RuntimeException implements Exception
     /**
      * {@inheritdoc}
      */
-    public function __toString()
+    #[ReturnTypeWillChange] public function __toString()
     {
         // This is just a wrapper around the base class and if it contains a reference to the previous
         // exception we should display that as a string.

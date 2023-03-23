@@ -69,7 +69,7 @@ class ReportDefinitionSerializer extends EntitySerializer
     /**
      * {@inheritdoc}
      */
-    public function deserialize($data, $type, $format, array $context = [])
+    public function deserialize($data, $type, $format, array $context = []): mixed
     {
         // Because of the decorator pattern in the EntitySerializer we have to
         // repeat this in here as well.
