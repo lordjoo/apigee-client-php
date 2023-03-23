@@ -54,7 +54,7 @@ PHP-HTTP documentation.
 To install the client library using Guzzle 6, enter the following commands:
 
 ```
-$ composer require php-http/guzzle6-adapter:^1.1.1
+$ composer require php-http/guzzle7-adapter
 $ composer require apigee/apigee-client-php
 ```
 
